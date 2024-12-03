@@ -1,0 +1,29 @@
+spring:
+  name: lumios-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lmios-backend-db
+    username: USERNAME
+    password: PASSWORD
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+jwt:
+  secret-key: "197402517b2470182da3da78f7bb65e6dc969d2bf4ceb36ed6640e6295d6c85c"
+
+providers:
+  isbndb:
+    key: "API_KEY"
+  google:
+    key: "API_KEY"
